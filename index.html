@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guimágua Smart Pool | Construção, Manutenção e Piscinas Inteligentes em Guimarães</title>
+    
+    <!-- Meta Tags SEO & Performance -->
+    <meta name="description" content="A Guimágua Smart Pool é especialista na construção, remodelação e manutenção inteligente de piscinas com monitorização IoT em tempo real. Viva a água com máxima transparência e tecnologia.">
+    <meta name="keywords" content="piscinas guimaraes, construcao piscinas, remodelacao piscinas, manutencao piscinas, smart pool, iot piscinas, guimagua">
+    <meta name="author" content="Guimágua Smart Pool">
+    <meta property="og:title" content="Guimágua Smart Pool | Tecnologia e Excelência em Piscinas">
+    <meta property="og:description" content="Construção de piscinas, remodelação e controlo inteligente de água via telemetria IoT.">
+    <meta property="og:type" content="website">
+
+    <!-- Preconnect Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Folha de Estilos Principal (com Design System) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Script de Interatividade e Dinâmica -->
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <!-- ====================================================================
+         1. CABEÇALHO & NAVEGAÇÃO (Sticky Header com Scroll Effect)
+         ==================================================================== -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            
+            <!-- Logotipo Oficial da Marca -->
+            <a href="#inicio" class="brand-link" aria-label="Guimágua Smart Pool - Página Inicial">
+                <div class="brand-icon-box">
+                    <span>G</span>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">Guimágua</span>
+                    <span class="brand-tagline">Smart Pool</span>
+                </div>
+            </a>
+
+            <!-- Menu de Navegação Central (Desktop) -->
+            <nav class="desktop-navigation" aria-label="Navegação Principal">
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link active">Início</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#sobre-nos" class="nav-link">Sobre nós</a></li>
+                    <li><a href="#contactos" class="nav-link">Contactos</a></li>
+                    <li><a href="src/index.html" class="nav-link">Área de Cliente</a></li>
+                </ul>
+            </nav>
+
+            <!-- Ações: Botão Área de Cliente & Hamburguer Mobile -->
+            <div class="header-actions">
+                <a href="src/index.html" class="btn btn-primary btn-client-area" title="Aceder ao Painel do Cliente e Telemetria">
+                    <i class="fa-solid fa-user-lock"></i>
+                    <span>Área de Cliente</span>
+                </a>
+
+                <!-- Botão Toggle do Menu Hamburger -->
+                <button type="button" class="mobile-toggle" aria-label="Abrir ou fechar menu de navegação" aria-expanded="false" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Drawer Mobile -->
+        <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Menu Mobile">
+            <a href="#inicio" class="nav-link">Início</a>
+            <a href="#servicos" class="nav-link">Serviços</a>
+            <a href="#sobre-nos" class="nav-link">Sobre nós</a>
+            <a href="#contactos" class="nav-link">Contactos</a>
+            <a href="src/index.html" class="btn btn-primary btn-client-area">
+                <i class="fa-solid fa-user-lock"></i>
+                <span>Área de Cliente</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ====================================================================
+             2. SEÇÃO HERO (Hero Banner)
+             - Gradiente escuro linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65))
+             - Alinhamento flexível e centralizado max-width: 1200px
+             - Botões de Ação equilibrados
+             ==================================================================== -->
+        <section class="hero-section" id="inicio">
+            <div class="container">
+                <div class="hero-content">
+                    
+                    <!-- Badge Tecnológico -->
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Tecnologia & Inovação para Piscinas</span>
+                    </div>
+
+                    <!-- Título Principal com Destaque em Gradiente -->
+                    <h1 class="hero-title">
+                        A Revolução Inteligente na <span class="hero-title-gradient">Construção & Cuidado</span> da Sua Piscina
+                    </h1>
+
+                    <!-- Subtítulo -->
+                    <p class="hero-subtitle">
+                        Conjugamos engenharia de ponta, design arquitetónico contemporâneo e monitorização IoT 24/7 para que desfrute de água cristalina com tranquilidade absoluta.
+                    </p>
+
+                    <!-- Botões de Ação -->
+                    <div class="hero-actions">
+                        <a href="#servicos" class="btn btn-primary btn-hero-primary">
+                            <i class="fa-solid fa-swimming-pool"></i>
+                            <span>Conheça os nossos serviços</span>
+                        </a>
+                        <a href="#contactos" class="btn-hero-secondary">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <span>Fale connosco</span>
+                        </a>
+                    </div>
+
+                    <!-- Indicadores de Destaque -->
+                    <div class="hero-highlights">
+                        <div class="hero-highlight-item">
+                            <span class="highlight-number">+15</span>
+                            <span class="highlight-label">Anos de Experiência e Rigor</span>
+                        </div>
+                        <div class="hero-highlight-item">
+                            <span class="highlight-number">24/7</span>
+                            <span class="highlight-label">Monitorização Contínua IoT</span>
+                        </div>
+                        <div class="hero-highlight-item">
+                            <span class="highlight-number">100%</span>
+                            <span class="highlight-label">Compromisso com Água Pura</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             3. SEÇÃO DE SERVIÇOS (Grid de Cartões Responsivo)
+             - display: grid; repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;
+             - Cartões com imagem de altura fixa, cantos arredondados, .shadow-md e hover translateY(-4px)
+             ==================================================================== -->
+        <section class="services-section section-py" id="servicos">
+            <div class="container">
+                
+                <!-- Cabeçalho de Secção -->
+                <div class="section-header">
+                    <span class="section-badge">
+                        <i class="fa-solid fa-water"></i>
+                        <span>O Que Fazemos</span>
+                    </span>
+                    <h2 class="section-title">Serviços Especializados de Excelência</h2>
+                    <p class="section-subtitle">
+                        Do primeiro traço arquitetónico ao tratamento biológico e automatizado da água, disponibilizamos soluções integrais chave-na-mão.
+                    </p>
+                </div>
+
+                <!-- Grelha de Cartões de Serviços -->
+                <div class="services-grid">
+                    
+                    <!-- Cartão 1: Construção de Piscinas -->
+                    <article class="service-card">
+                        <div class="service-image-box">
+                            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Construção de Piscina Moderna em Betão Armado" 
+                                 class="service-image" 
+                                 loading="lazy">
+                            <div class="service-image-badge">
+                                <i class="fa-solid fa-award text-sky-400"></i>
+                                <span>Chave-na-Mão</span>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-trowel-bricks"></i>
+                                </div>
+                                <h3 class="service-title">Construção de Piscinas</h3>
+                            </div>
+                            <p class="service-description">
+                                Projetamos e executamos piscinas de betão armado, transbordo ou espelho de água, integradas harmoniosamente na arquitetura exterior da sua habitação.
+                            </p>
+                            <ul class="service-features">
+                                <li class="service-feature-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Estrutura monobloco com garantia de estanquicidade</span>
+                                </li>
+                                <li class="service-feature-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Revestimentos em tela armada e pedra natural</span>
+                                </li>
+                                <li class="service-feature-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Pré-instalação completa de automação e aquecimento</span>
+                                </li>
+                            </ul>
+                            <div class="service-footer">
+                                <a href="#contactos" class="btn btn-outline btn-block">
+                                    <span>Pedir Orçamento de Construção</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cartão 2: Remodelação & Modernização -->
+                    <article class="service-card">
+                        <div class="service-image-box">
+                            <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Remodelação e Modernização de Piscinas Antigas" 
+                                 class="service-image" 
+                                 loading="lazy">
+                            <div class="service-image-badge">
+                                <i class="fa-solid fa-bolt text-amber-400"></i>
+                                <span>Eficiência Energética</span>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                </div>
+                                <h3 class="service-title">Remodelação & Reabilitação</h3>
+                            </div>
+                            <p class="service-description">
+                                Transforme uma piscina desatualizada num oásis moderno. Renovamos tubagens, substituímos telas degradadas e adicionamos degraus de praia e iluminação LED.
+                            </p>
+                            <ul class="service-features">
+                                <li class="service-feature-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Conversão para eletrólise de sal e desinfeção UV</span>
+                                </li>
+                                <li class="service-feature-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Bombas de velocidade variável de baixo consumo</span>
+                                </li>
+                                <li class="service-feature-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Substituição estética de bordaduras e decks</span>
+                                </li>
+                            </ul>
+                            <div class="service-footer">
+                                <a href="#contactos" class="btn btn-outline btn-block">
+                                    <span>Modernizar a Minha Piscina</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cartão 3: Manutenção Inteligente & IoT -->
+                    <article class="service-card">
+                        <div class="service-image-box">
+                            <img src="https://images.unsplash.com/photo-1562778612-e1e0cda9915c?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Manutenção Inteligente com Sondas IoT e Tratamento de Água" 
+                                 class="service-image" 
+                                 loading="lazy">
+                            <div class="service-image-badge">
+                                <i class="fa-solid fa-satellite-dish text-sky-400"></i>
+                                <span>Smart Pool 24/7</span>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-laptop-medical"></i>
+                                </div>
+                                <h3 class="service-title">Manutenção Inteligente</h3>
+                            </div>
+                            <p class="service-description">
+                                Planos periódicos de manutenção com envio de relatórios digitais e instalação de sondas IoT para calibração automática de pH, cloro e equilíbrio químico (LSI).
+                            </p>
+                            <ul class="service-features">
+                                <li class="service-feature-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Visitas periódicas efetuadas por técnicos certificados</span>
+                                </li>
+                                <li class="service-feature-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Leituras instantâneas sincronizadas com a App Cliente</span>
+                                </li>
+                                <li class="service-feature-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Limpeza de filtros, aspiração e verificação hidráulica</span>
+                                </li>
+                            </ul>
+                            <div class="service-footer">
+                                <a href="#contactos" class="btn btn-outline btn-block">
+                                    <span>Ver Planos de Manutenção</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             4. SEÇÃO SOBRE NÓS (Compromisso, Engenharia e Valores)
+             ==================================================================== -->
+        <section class="about-section section-py" id="sobre-nos">
+            <div class="container">
+                <div class="about-grid">
+                    
+                    <!-- Coluna de Texto e Pilares -->
+                    <div class="about-text-content">
+                        <span class="section-badge" style="align-self: flex-start;">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>A Nossa Identidade</span>
+                        </span>
+                        <h2 class="section-title">Mais de Uma Década a Definir os Padrões da Água</h2>
+                        <p class="about-paragraph">
+                            Nascida no coração de Guimaráes, a <strong>Guimágua Smart Pool</strong> aliou o conhecimento tradicional de engenharia civil ao poder da internet das coisas (IoT). Desenvolvemos soluções completas para quem não abdica de conforto, segurança biológica e comodidade máxima no jardim da sua casa.
+                        </p>
+
+                        <div class="about-pillars">
+                            <div class="about-pillar-item">
+                                <div class="about-pillar-icon">
+                                    <i class="fa-solid fa-compass-drafting"></i>
+                                </div>
+                                <div>
+                                    <h4 class="about-pillar-title">Engenharia e Precisão Técnica</h4>
+                                    <p class="about-pillar-desc">Cada detalhe do circuito de circulação, filtragem e dimensionamento hidráulico é calculado para durabilidade vitalícia.</p>
+                                </div>
+                            </div>
+
+                            <div class="about-pillar-item">
+                                <div class="about-pillar-icon">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <div>
+                                    <h4 class="about-pillar-title">Sustentabilidade e Poupança</h4>
+                                    <p class="about-pillar-desc">Sistemas que minimizam o desperdício de água e reduzem em até 70% o consumo de produtos químicos e eletricidade.</p>
+                                </div>
+                            </div>
+
+                            <div class="about-pillar-item">
+                                <div class="about-pillar-icon">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <div>
+                                    <h4 class="about-pillar-title">Apoio Local e Rápido</h4>
+                                    <p class="about-pillar-desc">Equipas de intervenção técnica sempre prontas para garantir que o seu verão nunca seja interrompido por avarias.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna Visual com Imagem & Card Flutuante -->
+                    <div class="about-visual">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Villa com Piscina de Luxo Guimágua Smart Pool" 
+                             class="about-main-image" 
+                             loading="lazy">
+                        
+                        <div class="about-floating-card">
+                            <div class="about-floating-icon">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <div>
+                                <h5 class="about-floating-title">Telemetria Ativa</h5>
+                                <p class="about-floating-desc">Leituras IoT em tempo real integradas na Área de Cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             5. SEÇÃO CTA: "A sua piscina sempre sob controlo"
+             - Banner com gradiente azul escuro oficial (--color-primary: #005A8C)
+             - Disposição lado a lado em desktop e empilhada em mobile
+             ==================================================================== -->
+        <section class="cta-banner-section" id="area-cliente-cta">
+            <div class="container">
+                <div class="cta-banner-container">
+                    
+                    <div class="cta-text-wrapper">
+                        <span class="cta-badge">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <span>Ecossistema Digital Guimágua</span>
+                        </span>
+                        <h2 class="cta-heading">A sua piscina sempre sob controlo, onde quer que esteja.</h2>
+                        <p class="cta-description">
+                            Aceda ao histórico de tratamentos, acompanhe os índices de pH e cloro via telemetria inteligente e solicite assistência com fotografias de avaria num clique através da nossa plataforma exclusiva.
+                        </p>
+                    </div>
+
+                    <div class="cta-action-wrapper">
+                        <a href="src/index.html" class="btn-cta-portal" title="Aceder à Área de Cliente Guimágua">
+                            <span>Aceder à Área de Cliente</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+             6. FORMULÁRIO DE CONTACTO ("Entre em contacto")
+             - Estrutura em 2 colunas: Informações à esquerda e Formulário à direita
+             - Inputs com .form-control e foco em azul (--color-primary)
+             - Botão com largura total, :hover e :active
+             ==================================================================== -->
+        <section class="contact-section section-py" id="contactos">
+            <div class="container">
+                
+                <!-- Cabeçalho -->
+                <div class="section-header">
+                    <span class="section-badge">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Fale Connosco</span>
+                    </span>
+                    <h2 class="section-title">Entre em Contacto Connosco</h2>
+                    <p class="section-subtitle">
+                        Tem um novo projeto em mente ou precisa de assistência técnica para a sua piscina? A nossa equipa de especialistas está pronta para ajudar.
+                    </p>
+                </div>
+
+                <!-- Grelha de Contacto em 2 Colunas -->
+                <div class="contact-layout-grid">
+                    
+                    <!-- Coluna 1: Informações de Contacto & Suporte -->
+                    <div class="contact-info-panel">
+                        <div class="contact-info-header">
+                            <h3>Canais Diretos</h3>
+                            <p>Visite o nosso showroom ou contacte-nos através dos meios disponíveis.</p>
+                        </div>
+
+                        <div class="contact-channels">
+                            <!-- Morada -->
+                            <div class="channel-item">
+                                <div class="channel-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <span class="channel-label">Morada & Showroom</span>
+                                    <span class="channel-value">Parque Empresarial de Guimarães, Lote 14</span>
+                                    <span class="channel-note">4800-000 Guimarães, Portugal</span>
+                                </div>
+                            </div>
+
+                            <!-- Telefone -->
+                            <div class="channel-item">
+                                <div class="channel-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <span class="channel-label">Telefone Comercial</span>
+                                    <a href="tel:+351253000000" class="channel-value">+351 253 000 000</a>
+                                    <span class="channel-note">Segunda a Sexta, das 09:00 às 18:30</span>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="channel-item">
+                                <div class="channel-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="channel-content">
+                                    <span class="channel-label">Correio Eletrónico</span>
+                                    <a href="mailto:geral@guimaguasmartpool.pt" class="channel-value">geral@guimaguasmartpool.pt</a>
+                                    <span class="channel-note">Resposta garantida em 24h úteis</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Auxiliar de Emergência -->
+                        <div class="support-banner">
+                            <i class="fa-solid fa-screwdriver-wrench support-banner-icon"></i>
+                            <div class="support-banner-text">
+                                <h4>Apoio Técnico Prioritário</h4>
+                                <p>Clientes com contrato de manutenção dispõem de linha 24/7 na Área de Cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna 2: Formulário de Contacto -->
+                    <div class="contact-form-panel">
+                        <form id="contactForm" novalidate>
+                            
+                            <div class="form-row">
+                                <!-- Campo Nome -->
+                                <div class="form-group">
+                                    <label for="nome" class="form-label">Nome Completo *</label>
+                                    <input type="text" 
+                                           id="nome" 
+                                           name="nome" 
+                                           class="form-control" 
+                                           placeholder="Ex: Manuel Silva" 
+                                           required>
+                                </div>
+
+                                <!-- Campo Email -->
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Endereço de Email *</label>
+                                    <input type="email" 
+                                           id="email" 
+                                           name="email" 
+                                           class="form-control" 
+                                           placeholder="Ex: manuel@exemplo.pt" 
+                                           required>
+                                </div>
+                            </div>
+
+                            <!-- Campo Serviço Pretendido -->
+                            <div class="form-group">
+                                <label for="servico" class="form-label">Serviço Pretendido *</label>
+                                <select id="servico" name="servico" class="form-control" required>
+                                    <option value="" disabled selected>Selecione uma opção...</option>
+                                    <option value="construcao">Construção Nova de Piscina</option>
+                                    <option value="remodelacao">Remodelação ou Modernização</option>
+                                    <option value="manutencao">Manutenção Periódica / Tratamento</option>
+                                    <option value="iot">Instalação de Sistema IoT Smart Pool</option>
+                                    <option value="outro">Outro Assunto / Pedido de Informação</option>
+                                </select>
+                            </div>
+
+                            <!-- Campo Mensagem -->
+                            <div class="form-group">
+                                <label for="mensagem" class="form-label">Mensagem ou Detalhes do Projeto *</label>
+                                <textarea id="mensagem" 
+                                          name="mensagem" 
+                                          rows="5" 
+                                          class="form-control" 
+                                          placeholder="Descreva a sua ideia, dimensões aproximadas do terreno ou a avaria identificada..." 
+                                          required></textarea>
+                            </div>
+
+                            <!-- Botão de Envio (Largura Total) -->
+                            <button type="submit" id="submitBtn" class="btn btn-primary btn-submit-message">
+                                <i class="fa-regular fa-paper-plane"></i>
+                                <span>Enviar Mensagem</span>
+                            </button>
+
+                            <!-- Toast de Feedback Dinâmico -->
+                            <div id="formFeedback" class="form-feedback-toast" role="alert" aria-live="polite"></div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====================================================================
+         7. RODAPÉ INSTITUCIONAL (Footer)
+         ==================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                
+                <!-- Coluna 1: Marca & Apresentação -->
+                <div class="footer-brand-column">
+                    <a href="#inicio" class="brand-link">
+                        <div class="brand-icon-box">
+                            <span>G</span>
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-title">Guimágua</span>
+                            <span class="brand-tagline">Smart Pool</span>
+                        </div>
+                    </a>
+                    <p class="footer-about-text">
+                        Pioneiros em tecnologia aquática e telemetria inteligente de piscinas no norte de Portugal. Água perfeita, cristalina e sustentável o ano inteiro.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn da Guimágua">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram da Guimágua">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook da Guimágua">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Navegação Rápida -->
+                <div>
+                    <h4 class="footer-column-title">Navegação</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="#inicio" class="footer-link">Início</a></li>
+                        <li><a href="#servicos" class="footer-link">Os Nossos Serviços</a></li>
+                        <li><a href="#sobre-nos" class="footer-link">Sobre a Guimágua</a></li>
+                        <li><a href="#contactos" class="footer-link">Fale Connosco</a></li>
+                        <li><a href="src/index.html" class="footer-link">Área de Cliente</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Serviços -->
+                <div>
+                    <h4 class="footer-column-title">Especialidades</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="#servicos" class="footer-link">Piscinas de Betão Armado</a></li>
+                        <li><a href="#servicos" class="footer-link">Piscinas de Transbordo</a></li>
+                        <li><a href="#servicos" class="footer-link">Eletrólise de Sal & UV</a></li>
+                        <li><a href="#servicos" class="footer-link">Telemetria & Automação IoT</a></li>
+                        <li><a href="#servicos" class="footer-link">Manutenção Periódica</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contacto Rápido -->
+                <div>
+                    <h4 class="footer-column-title">Sede</h4>
+                    <div class="footer-link-list">
+                        <div class="footer-contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Parque Empresarial, Guimarães</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+351 253 000 000</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>geral@guimaguasmartpool.pt</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Barra Inferior de Direitos & Legal -->
+            <div class="footer-bottom-bar">
+                <span>&copy; 2026 Guimágua Smart Pool. Todos os direitos reservados.</span>
+                <div class="footer-legal-links">
+                    <a href="#contactos">Privacidade</a>
+                    <a href="#contactos">Termos de Uso</a>
+                    <a href="#contactos">Livro de Reclamações</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
