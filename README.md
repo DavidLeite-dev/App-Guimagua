@@ -1,1 +1,1 @@
-# App-Guimagua
+# App-Guimagua-sprint-2-melhoria

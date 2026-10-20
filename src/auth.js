@@ -1,3 +1,4 @@
+const emailError = document.getElementById("emailError");
 
 "use strict";
 
@@ -48,9 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.getElementById("email");
         const password = document.getElementById("password");
 
-        const emailError = document.getElementById("emailError");
+       const emailError = document.getElementById("emailError");
         const passwordError = document.getElementById("passwordError");
         const message = document.getElementById("loginMessage");
+        const togglePassword = document.getElementById("togglePassword");
 
         function validateEmail() {
             const value = email.value.trim();
@@ -94,16 +96,43 @@ document.addEventListener("DOMContentLoaded", function () {
             return true;
         }
 
-        // Limpar erros quando o utilizador começa a corrigir os campos
-        email.addEventListener("input", function () {
-            clearFieldError(email, emailError);
-            message.hidden = true;
-        });
+       // Indica se o último erro foi de credenciais inválidas
+            let credentialsError = false;
 
-        password.addEventListener("input", function () {
-            clearFieldError(password, passwordError);
-            message.hidden = true;
-        });
+            // Limpar erros quando o utilizador começa a corrigir os campos
+            function onInput(input, errorElement) {
+                clearFieldError(input, errorElement);
+
+                // Se o erro era de credenciais, limpa os dois campos de uma vez
+                if (credentialsError) {
+                    clearFieldError(email, emailError);
+                    clearFieldError(password, passwordError);
+                    credentialsError = false;
+                }
+
+                message.hidden = true;
+            }
+
+            email.addEventListener("input", function () {
+                onInput(email, emailError);
+            });
+
+            password.addEventListener("input", function () {
+                onInput(password, passwordError);
+            });
+
+            // Mostrar ou ocultar a palavra-passe
+            togglePassword.addEventListener("click", function () {
+                const show = password.type === "password";
+
+                password.type = show ? "text" : "password";
+                togglePassword.textContent = show ? "Ocultar" : "Mostrar";
+                togglePassword.setAttribute("aria-pressed", String(show));
+                togglePassword.setAttribute(
+                    "aria-label",
+                    show ? "Ocultar palavra-passe" : "Mostrar palavra-passe"
+                );
+            });
 
         // Validar quando o formulário é submetido
         loginForm.addEventListener("submit", function (event) {
@@ -132,12 +161,48 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // A autenticação real ainda não está configurada.
-            showMessage(
-                message,
-                "error",
-                "Os campos estão preenchidos, mas o login ainda não está ligado a um sistema de autenticação."
-            );
+                        // Credenciais de DEMONSTRAÇÃO (remover quando houver autenticação real)
+            const DEMO_EMAIL = "cliente@guimagua.pt";
+            const DEMO_PASSWORD = "Piscina2026";
+
+            const button = loginForm.querySelector(".auth-button");
+            button.disabled = true;
+            button.textContent = "A entrar…";
+
+            setTimeout(function () {
+                button.disabled = false;
+                button.textContent = "Iniciar sessão";
+
+                const ok =
+                    email.value.trim().toLowerCase() === DEMO_EMAIL &&
+                    password.value === DEMO_PASSWORD;
+
+                if (ok) {
+                    showMessage(
+                        message,
+                        "success",
+                        "Sessão iniciada com sucesso (demonstração)."
+                    );
+                    return;
+                }
+
+                // Credenciais inválidas: os dois campos ficam a vermelho
+                credentialsError = true;
+
+                [email, password].forEach(function (input) {
+                    input.closest(".form-group").classList.add("error");
+                    input.setAttribute("aria-invalid", "true");
+                });
+
+                showMessage(
+                    message,
+                    "error",
+                    "Email ou palavra-passe incorretos."
+                );
+
+                password.value = "";
+                password.focus();
+            }, 800);
         });
     }
 
@@ -205,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showMessage(
                 message,
                 "success",
-                "O formato do email é válido. O envio de instruções de recuperação ainda não está configurado."
+              "Se o email estiver registado, receberá instruções para repor a palavra-passe."
             );
         });
     }
